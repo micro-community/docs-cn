@@ -297,7 +297,7 @@
             <p>Understand the design guidelines, helping designers build product that's logically sound, reasonably structured and easy to use.</p>
             <router-link
               active-class="active"
-              to="/en-US/guide/design"
+              to="/guide/design"
               exact>View Detail
             </router-link>
           </div>
@@ -309,19 +309,7 @@
             <p>Experience interaction details by strolling through component demos. Use encapsulated code to improve developing efficiency.</p>
             <router-link
               active-class="active"
-              to="/en-US/component/layout"
-              exact>View Detail
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~documents/assets/images/theme-index-icon.svg" alt="">
-            <h3>Theme</h3>
-            <p>Online theme roller, visualize custom and manage site themes and component styles</p>
-            <router-link
-              active-class="active"
-              to="/en-US/theme"
+              to="/component/layout"
               exact>View Detail
             </router-link>
           </div>
@@ -333,7 +321,7 @@
             <p>Download relevant design resources for shaping page prototype or visual draft, increasing design efficiency.</p>
             <router-link
               active-class="active"
-              to="/en-US/resource"
+              to="/resource"
               exact>View Detail
             </router-link>
           </div>

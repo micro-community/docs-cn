@@ -316,18 +316,6 @@
         </li>
         <li>
           <div class="card">
-            <img src="~documents/assets/images/theme-index-icon.svg" alt="">
-            <h3>主题</h3>
-            <p>在线主题编辑器，可视化定制和管理站点主题、组件样式</p>
-            <router-link
-              active-class="active"
-              to="/theme"
-              exact>查看详情
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
             <img src="~documents/assets/images/resource.png" alt="">
             <h3>资源</h3>
             <p>下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计效率。</p>
