@@ -10,21 +10,19 @@ const client = algoliasearch('4C63BTGP6S', key);
 const langs = {
   'zh-CN': 'element-zh',
   'en-US': 'element-en',
-  'es': 'element-es',
-  'fr-FR': 'element-fr'
 };
 
-['zh-CN', 'en-US', 'es', 'fr-FR'].forEach(lang => {
+['zh-CN'].forEach(lang => {
   const indexName = langs[lang];
   const index = client.initIndex(indexName);
   index.clearIndex(err => {
     if (err) return;
-    fs.readdir(path.resolve(__dirname, `../../examples/docs/${ lang }`), (err, files) => {
+    fs.readdir(path.resolve(__dirname, `../../documents/docs/${ lang }`), (err, files) => {
       if (err) return;
       let indices = [];
       files.forEach(file => {
         const component = file.replace('.md', '');
-        const content = fs.readFileSync(path.resolve(__dirname, `../../examples/docs/${ lang }/${ file }`), 'utf8');
+        const content = fs.readFileSync(path.resolve(__dirname, `../../documents/docs/${ lang }/${ file }`), 'utf8');
         const matches = content
           .replace(/:::[\s\S]*?:::/g, '')
           .replace(/```[\s\S]*?```/g, '')

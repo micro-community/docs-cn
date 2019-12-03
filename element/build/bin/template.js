@@ -1,5 +1,5 @@
 const path = require('path');
-const templates = path.resolve(process.cwd(), './examples/pages/template');
+const templates = path.resolve(process.cwd(), './documents/pages/template');
 
 const chokidar = require('chokidar');
 let watcher = chokidar.watch([templates]);

@@ -11,15 +11,12 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const config = require('./config');
 
 const isProd = process.env.NODE_ENV === 'production';
-const isPlay = !!process.env.PLAY_ENV;
 
 const webpackConfig = {
   mode: process.env.NODE_ENV,
-  entry: isProd ? {
-    docs: './examples/entry.js'
-  } : (isPlay ? './examples/play.js' : './examples/entry.js'),
+  entry: './documents/entry.js',
   output: {
-    path: path.resolve(process.cwd(), './examples/element-ui/'),
+    path: path.resolve(process.cwd(), './documents/dist/'),
     publicPath: process.env.CI_ENV || '',
     filename: '[name].[hash:7].js',
     chunkFilename: isProd ? '[name].[hash:7].js' : '[name].js'
@@ -43,12 +40,6 @@ const webpackConfig = {
   },
   module: {
     rules: [
-      {
-        enforce: 'pre',
-        test: /\.(vue|jsx?)$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader'
-      },
       {
         test: /\.(jsx?|babel|es6)$/,
         include: process.cwd(),
@@ -102,12 +93,12 @@ const webpackConfig = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './examples/index.tpl',
+      template: './documents/index.tpl',
       filename: './index.html',
-      favicon: './examples/favicon.ico'
+      favicon: './documents/favicon.ico'
     }),
     new CopyWebpackPlugin([
-      { from: 'examples/versions.json' }
+      { from: 'documents/versions.json' }
     ]),
     new ProgressBarPlugin(),
     new VueLoaderPlugin(),
