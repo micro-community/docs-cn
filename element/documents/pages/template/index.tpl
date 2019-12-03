@@ -297,7 +297,7 @@
             <p><%= 4 ></p>
             <router-link
               active-class="active"
-              to="/<%= lang >/guide/design"
+              to="/guide/design"
               exact><%= 5 >
             </router-link>
           </div>
@@ -309,19 +309,7 @@
             <p><%= 7 ></p>
             <router-link
               active-class="active"
-              to="/<%= lang >/component/layout"
-              exact><%= 5 >
-            </router-link>
-          </div>
-        </li>
-        <li>
-          <div class="card">
-            <img src="~documents/assets/images/theme-index-icon.svg" alt="">
-            <h3><%= 10 ></h3>
-            <p><%= 11 ></p>
-            <router-link
-              active-class="active"
-              to="/<%= lang >/theme"
+              to="/component/layout"
               exact><%= 5 >
             </router-link>
           </div>
@@ -333,7 +321,7 @@
             <p><%= 9 ></p>
             <router-link
               active-class="active"
-              to="/<%= lang >/resource"
+              to="/resource"
               exact><%= 5 >
             </router-link>
           </div>
